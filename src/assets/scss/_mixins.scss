@@ -1,0 +1,188 @@
+// default transisi
+@mixin base_transition($t) {
+	-webkit-transition: $t .2s ease;
+	-moz-transition: $t .2s ease;
+	-ms-transition: $t .2s ease;
+	-o-transition: $t .2s ease;
+	transition: $t .2s ease;
+}
+
+
+@mixin next_transition($t) {
+	-webkit-transition: $t ease-in-out;
+	-moz-transition: $t ease-in-out;
+	-ms-transition: $t ease-in-out;
+	-o-transition: $t ease-in-out;
+	transition: $t ease-in-out;
+}
+
+@mixin skew($t) {
+	-moz-transform: skewX($t);
+	-webkit-transform: skewX($t);
+	-o-transform: skewX($t);
+	-ms-transform: skewX($t);
+	transform: skewX($t);
+}
+// border radius
+@mixin border_radius($x) {
+	-webkit-border-radius: $x;
+	-moz-border-radius: $x;
+	-ms-border-radius: $x;
+	-o-border-radius: $x;
+	border-radius: $x;
+}
+// skala
+@mixin base_scale($x) {
+    -ms-transform: scale($x); /* IE 9 */
+    -webkit-transform: scale($x); /* Safari */
+    transform: scale($x);
+}
+
+// translate
+@mixin ontranslate($x,$y) {
+	-moz-transform: translate($x,$y);
+	-webkit-transform: translate($x,$y);
+	-o-transform: translate($x,$y);
+	-ms-transform: translate($x,$y);
+	transform: translate($x,$y);
+
+}
+// translate
+@mixin transf($args) {
+	-moz-transform: $args;
+	-webkit-transform: $args;
+	-o-transform: $args;
+	-ms-transform: $args;
+	transform: $args;
+
+}
+
+
+// reset style ul
+@mixin reset_ul {
+	margin: 0;
+	padding: 0;
+}
+// 100%
+@mixin display_full {
+	width: 100%;
+	height: 100%;
+}
+// untuk overflow judul pada list berita
+@mixin title_overflow($height, $max-height) {
+	height: $height;
+	max-height: $max-height;
+	overflow: hidden;
+}
+// media
+@mixin max-responsive ($media) {
+  @media (max-width: $media) { @content; }
+}
+@mixin min-responsive ($media) {
+  @media (min-width: $media) { @content; }
+}
+@mixin range-responsive ($media, $media2) {
+  @media (min-width: $media) and (max-width: $media2) { @content; }
+}
+
+@mixin transition($t) {
+	-webkit-transition: $t ease-in-out;
+	-moz-transition: $t ease-in-out;
+	-ms-transition: $t ease-in-out;
+	-o-transition: $t ease-in-out;
+	transition: $t ease-in-out;
+}
+
+// font template
+@mixin font-pack($family: false, $size: false, $weight: false,  $lh: false, $colour: false) {
+    @if $family { font-family: $family; }
+    @if $size { font-size: $size; }
+    @if $weight { font-weight: $weight; }
+    @if $lh { line-height: $lh; }
+    @if $colour { color: $colour; }
+}
+
+@mixin bordered {
+//    padding: 0px;
+    background: white;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+@mixin fade-down{
+  animation: fade-down ease .4s;
+  animation-iteration-count: 1;
+  animation-fill-mode:forwards; /*when the spec is finished*/
+  -webkit-animation: fade-down ease .4s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/ 
+  -moz-animation: fade-down ease .4s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-fill-mode:forwards; /*FF 5+*/
+  -o-animation: fade-down ease .4s;
+  -o-animation-iteration-count: 1;
+  -o-animation-fill-mode:forwards; /*Not implemented yet*/
+  -ms-animation: fade-down ease .4s;
+  -ms-animation-iteration-count: 1;
+  -ms-animation-fill-mode:forwards; /*IE 10+*/
+}
+
+
+/* Effect 2: Move Up */
+@mixin moveup {
+	-webkit-transform: translateY(200px);
+	transform: translateY(200px);
+	-webkit-animation: moveUp 0.65s ease forwards;
+	animation: moveUp 0.65s ease forwards;
+}
+
+/* Effect 2: Move down */
+@mixin topbtm($d) {
+	-webkit-transform: translateY($d);
+	transform: translateY($d);
+	-webkit-animation: moveUp 0.65s forwards;
+	animation: moveUp 0.65s forwards;
+}
+
+
+@mixin hover-option {
+    transition: .2s;
+    &:hover {
+        font-weight: 500;
+    }
+}
+
+@mixin placeholder($val) {
+   
+}
+
+@mixin appearance($val) {
+   -webkit-appearance: $val;
+   -moz-appearance:    $val;
+   appearance:         $val;
+}
+
+@mixin clearfix {
+    *zoom: 1;
+	&:after,
+	&:before {
+		display: table;
+		content: "";
+		line-height: 0;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin noselect {
+    
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
