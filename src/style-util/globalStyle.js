@@ -53,6 +53,9 @@ const GlobalStyle = createGlobalStyle`
         margin-bottom: 5px;
         overflow:hidden;
     }
+
+    
+
 `;
 
 export default GlobalStyle;

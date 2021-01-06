@@ -1,5 +1,5 @@
 import React from "react";
-import { Slider, CategoryThumnail } from "./components";
+import { Slider, CategoryThumnail, IconSet } from "./components";
 import { Header } from "./containers";
 
 
@@ -9,6 +9,7 @@ const App = () => {
             <Header />
             <Slider />
             <CategoryThumnail />
+            <IconSet icon="bg-square" size="500px" color="#627279" />
         </>
     );
 };
