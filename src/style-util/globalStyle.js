@@ -14,6 +14,9 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     font-size: 14px;
   }
+  * {
+      box-sizing:border-box
+  }
   a {
       color:inherit;
       text-decoration:none
