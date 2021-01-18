@@ -11,5 +11,8 @@ export const Container = Styled.div`
 `;
 export const Item = Styled.a`
     padding: 0 10px;   
-    font-size:14px
+    font-size:16px;
+    &:hover {
+        color:#F8A585
+    }
 `;

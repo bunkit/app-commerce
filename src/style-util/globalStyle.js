@@ -1,9 +1,10 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { fontFamily, fontSize, color } from "./configStyle";
 
 const GlobalStyle = createGlobalStyle`
   body {
-    font-family: 'Playfair Display', helvetica, serif;
-	color: #454148;
+    font-family: ${fontFamily.body};
+	color: ${color.darkGrape};
     background: white;
     -webkit-font-smoothing: antialiased;
     -webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -12,14 +13,20 @@ const GlobalStyle = createGlobalStyle`
 	padding: 0;
     width: 100%;
     overflow-x: hidden;
-    font-size: 14px;
+    font-size: ${fontSize.base};
   }
   * {
-      box-sizing:border-box
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
   }
   a {
       color:inherit;
-      text-decoration:none
+      text-decoration:none;
+      &:hover,&:focus {
+          color:${color.orangeTacao}
+      }
+      transition: color .2s ease-in-out;
   }
   .slick-dots {
     left:0
@@ -56,9 +63,6 @@ const GlobalStyle = createGlobalStyle`
         margin-bottom: 5px;
         overflow:hidden;
     }
-
-    
-
 `;
 
 export default GlobalStyle;
@@ -80,7 +84,10 @@ export const ContainerHeader = styled(Container)`
     align-items: center;
     position: relative;
     height: 60px;
+    width: 100%;
 `;
 export const HeaderFull = styled.div`
     background: #e9edeb;
 `;
+
+// export 
