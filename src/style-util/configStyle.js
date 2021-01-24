@@ -39,3 +39,27 @@ export const color = {
 export const border = {
     shadow: "3px 2px 20px 1px rgba(182, 182, 182, 0.33)",
 };
+
+
+export const Container = `
+    width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    *zoom: 1;
+`;
+export const ContainerMedium = styled(Container)`
+    width: 700px;
+`;
+export const ContainerHeader = styled(Container)`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 60px;
+    width: 100%;
+`;
+export const HeaderFull = styled.div`
+    background: #e9edeb;
+`;

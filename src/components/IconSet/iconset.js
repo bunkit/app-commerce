@@ -3,7 +3,7 @@ import iconData from "../../assets/selection.json";
 import IcomoonReact from "icomoon-react";
 const IconSet = ({
     color = "inherit",
-    size = "inherit",
+    size = "0",
     icon = "",
     ...restProps
 }) => {
